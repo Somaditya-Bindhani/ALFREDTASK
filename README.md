@@ -4,6 +4,7 @@ sometimes disturb their pans
 <h1>Build Using ?</h1>
 This project is built using MERN Stack.
 <h1>File Structure</h1>
+<pre>
 📦src
  ┣ 📂animations
  ┃ ┗ 📜86998-loading-logo-lottie-animation.json
@@ -30,7 +31,7 @@ This project is built using MERN Stack.
  ┣ 📜App.js
  ┣ 📜index.css
  ┗ 📜index.js
-
+</pre>
  <h1>What this app does ?</h1>
  1.You can checkh the weather updates of a region
  2.Add the location to your list
