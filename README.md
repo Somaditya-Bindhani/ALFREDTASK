@@ -33,6 +33,7 @@ This project is built using MERN Stack.
  ┗ 📜index.js
 </pre>
  <h1>What this app does ?</h1>
+ <pre>
  1.You can checkh the weather updates of a region
  2.Add the location to your list
  3.Preform the following task : 
@@ -42,3 +43,4 @@ This project is built using MERN Stack.
     d.Unhide Location
     e.Undo a deleted Location
     d.Reset all the location
+    </pre>
