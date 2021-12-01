@@ -1,0 +1,41 @@
+.container {
+  /* border: 2px solid red; */
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+.logo {
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+  font-weight: 700;
+  color: white;
+}
+.logo span {
+  color: rgb(118, 150, 81);
+}
+
+.menu{
+    /* border: 2px solid red; */
+    width: 30%;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.icon{
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 660px) {
+  .logo {
+    font-size: 2rem;
+  }
+  .icon{
+    font-size: 1.5rem;
+  }
+}

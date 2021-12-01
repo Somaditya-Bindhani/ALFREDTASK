@@ -1,0 +1,53 @@
+.container {
+  /* border: 2px solid red ; */
+  height: 90vh;
+  z-index: 50;
+}
+.banner {
+  border: 2px solid white;
+  font-size: 4.5rem;
+  color: white;
+  width: 90%;
+  height: 80vh;
+  position: relative;
+  top: 4vh;
+  left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 40%;
+}
+
+@media only screen and (max-width: 1040px) {
+  .banner {
+    font-size: 4.5rem;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .banner {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .banner {
+    font-size: 3.5rem;
+    /* top: 2vh; */
+  }
+}
+@media only screen and (max-width: 520px) {
+  .banner {
+    font-size: 3.2rem;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .banner {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width:380px) {
+  .banner {
+    font-size: 2.5rem;
+  }
+}
