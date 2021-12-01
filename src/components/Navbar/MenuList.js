@@ -12,9 +12,7 @@ import {
 } from "react-icons/ai";
 import LoadingSpinner from "../UI/Loading Spinner/LoadingSpinner";
 const MenuList = ({ setShowMenu }) => {
-  const [showHidden, setShowHidden] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const cityRef = useRef();
+  //store provides all th necessary functions to manange the app
   const weatherCtx = useContext(WeatherContext);
   const {
     curData,
@@ -27,7 +25,14 @@ const MenuList = ({ setShowMenu }) => {
     undoHanlder,
     undoArray,
   } = weatherCtx;
+  //states and refs
+  const [showHidden, setShowHidden] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  //sets the new array evenry time hide,unhide or delete happens
   const [newArray, setNewArray] = useState([...placesArray]);
+  const cityRef = useRef();
+
+  //get the location data
   const getInfoHandler = async (cityName) => {
     let data;
     try {
@@ -67,7 +72,7 @@ const MenuList = ({ setShowMenu }) => {
       } else {
         imageName = "sand";
       }
-
+      //only sets the require data
       const newObj = {
         name: data.data.name,
         id: data.data.weather[0].id,
@@ -87,23 +92,24 @@ const MenuList = ({ setShowMenu }) => {
     }
     cityRef.current.value = "";
   };
+  //triggers the enter button
   const handleKeypress = (e) => {
     if (e.key === "Enter") {
       getInfoHandler(cityRef.current.value);
     }
   };
+  //selects a loaction
   const selectHandler = (name) => {
     const data = placesArray.find((place) => place.name === name);
     isSelected(data);
   };
-
+  //chnage the array wrt to any function used
   useEffect(() => {
     if (placesArray) {
       if (showHidden) {
         setNewArray([...placesArray]);
         isSelected(placesArray[0]);
       } else {
-        // setNewArray(placesArray);
         const nArray = placesArray.filter((place) => place.isHidden !== true);
         isSelected(nArray[0]);
         setNewArray([...nArray]);
