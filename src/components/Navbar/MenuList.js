@@ -11,7 +11,6 @@ import {
   AiOutlinePlus,
 } from "react-icons/ai";
 import LoadingSpinner from "../UI/Loading Spinner/LoadingSpinner";
-require("dotenv").config();
 const MenuList = ({ setShowMenu }) => {
   //store provides all th necessary functions to manange the app
   const weatherCtx = useContext(WeatherContext);
@@ -39,7 +38,7 @@ const MenuList = ({ setShowMenu }) => {
     try {
       setIsLoading(true);
       data = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_APIKEY}&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=bdc999cfa0bcb846d15af615cef10d7f&units=metric`
       );
       console.log(data);
       if (data.status !== 200) {
