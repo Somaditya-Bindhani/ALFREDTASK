@@ -11,6 +11,7 @@ import {
   AiOutlinePlus,
 } from "react-icons/ai";
 import LoadingSpinner from "../UI/Loading Spinner/LoadingSpinner";
+require('dotenv').config();
 const MenuList = ({ setShowMenu }) => {
   //store provides all th necessary functions to manange the app
   const weatherCtx = useContext(WeatherContext);
