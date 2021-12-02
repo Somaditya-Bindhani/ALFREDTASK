@@ -38,7 +38,7 @@ const MenuList = ({ setShowMenu }) => {
     try {
       setIsLoading(true);
       data = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=bdc999cfa0bcb846d15af615cef10d7f&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_API_KEY}&units=metric`
       );
       console.log(data);
       if (data.status !== 200) {

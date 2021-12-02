@@ -1,6 +1,5 @@
 import React, {  useState } from "react";
 import styles from "./Navbar.module.css";
-
 import { BsThreeDotsVertical } from "react-icons/bs";
 import MenuList from "./MenuList";
 const Navbar = ({ getInfoHandler,placesArray ,setPlacesArray,curData}) => {
